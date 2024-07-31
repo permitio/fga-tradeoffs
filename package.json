@@ -1,0 +1,22 @@
+{
+  "name": "fga-tradeoffs",
+  "version": "1.0.0",
+  "description": "A demonstration various fine-grained authorization models for object filtering",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "Authorization",
+    "access",
+    "control",
+    "fga",
+    "permit.io"
+  ],
+  "author": "gemanor",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "permitio": "^2.5.2"
+  }
+}

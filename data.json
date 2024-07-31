@@ -1,0 +1,84 @@
+{
+  "Visit": [
+    {
+      "appointment_id": "123",
+      "practitioner_id": "123456",
+      "diagnosis": ["y4500"],
+      "concealed": false
+    },
+    {
+      "appointment_id": "456",
+      "practitioner_id": "888888",
+      "diagnosis": ["y3500"],
+      "concealed": true
+    },
+    {
+      "appointment_id": "789",
+      "practitioner_id": "555555",
+      "diagnosis": ["y2777"],
+      "concealed": false
+    },
+    {
+      "appointment_id": "101",
+      "practitioner_id": "999999",
+      "diagnosis": ["y2300"],
+      "concealed": false
+    },
+    {
+      "appointment_id": "102",
+      "practitioner_id": "888888",
+      "diagnosis": ["y4500", "y3500"],
+      "concealed": false
+    },
+    {
+      "appointment_id": "103",
+      "practitioner_id": "123456",
+      "diagnosis": ["y2300", "y4500"],
+      "concealed": false
+    }
+  ],
+  "Diagnosis": [
+    {
+      "id": "y4500",
+      "concealment": false
+    },
+    {
+      "id": "y2300",
+      "concealment": false
+    },
+    {
+      "id": "y2777",
+      "concealment": true
+    },
+    {
+      "id": "y3500",
+      "concealment": false
+    },
+    {
+      "id": "y5000",
+      "concealment": false
+    }
+  ],
+  "Practitioner": [
+    {
+      "practitioner_id": "123456",
+      "is_advertised": true
+    },
+    {
+      "practitioner_id": "555555",
+      "is_advertised": true
+    },
+    {
+      "practitioner_id": "777777",
+      "is_advertised": true
+    },
+    {
+      "practitioner_id": "888888",
+      "is_advertised": true
+    },
+    {
+      "practitioner_id": "999999",
+      "is_advertised": false
+    }
+  ]
+}
