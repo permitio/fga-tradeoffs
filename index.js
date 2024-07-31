@@ -6,14 +6,14 @@ const {
   bulkFlatCheck,
   graphFilterCheck,
   customRegoSingleCheck,
-} = require("./checks");
+} = require("./lib/checks");
 const {
   flatSync,
   graphSync,
   clearAllInstances,
   syncRego,
   syncUser,
-} = require("./sync");
+} = require("./lib/sync");
 
 const sleep = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
