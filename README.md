@@ -17,7 +17,7 @@ The data that we are using to demonstrate the trade-offs are a set of visits wit
 An allowed visit is a visit that is not concealed, its related diagnoses are not concealed, and its practitioner is advertised.
 
 All the mock data is stored in the `data/data.json` file.
-```json
+```js
 // Visit
 {
     "appointment_id": "123",
@@ -32,7 +32,7 @@ All the mock data is stored in the `data/data.json` file.
     "concealment": false
 }
 
-// Practitioner":
+// Practitioner
 {
     "practitioner_id": "123456",
     "is_advertised": true
