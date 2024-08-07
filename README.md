@@ -52,7 +52,7 @@ The tests are:
 2. Graph-based policy configuration with the trade-off of data manipulation and extra conditional edges and special nodes
 3. Policy configuration with the trade-off of complex access control rules in the Rego language
 
-##### Bonus:
+##### Bonus test:
 > Demonstration of a simple solution by Permit.io that solves the problem with a simple policy configuration and enforcement code
 
 Each test starts by cleaning the data and some policies from the Permit.io environment. Then, it applies the relevant policy data and runs the test.
