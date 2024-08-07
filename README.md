@@ -17,7 +17,7 @@ The data that we are using to demonstrate the trade-offs, are set of visits that
 An allowed visit is a visit that is not concealed, its related diagnoses are not concealed, and its practitioner is advertised.
 
 All the mock data is stored in the `data/data.json` file.
-```
+```json
 // Visit
 {
     "appointment_id": "123",
@@ -43,7 +43,7 @@ All the mock data is stored in the `data/data.json` file.
 The main test file for the project, is the `index.js` file that contains 4 types of policy check that requires both conditions and relationships to be checked.
 
 All the tests are filtering the visits array and should return the following result.
-```
+```javascript
 [true, false, false, false, true, true]
 ```
 
@@ -51,7 +51,9 @@ The tests are:
 1. Simple policy configuration with the trade-off of using complex enforcement code
 2. Graph-based policy configuration with the trade-off of data manipulation and extra conditional edges and special nodes
 3. Policy configuration with the trade-off of complex access control rules in the Rego language
-4. Demonstration of a simple solution by Permit.io that solves the problem with a simple policy configuration and enforcement code
+
+##### Bonus:
+> Demonstration of a simple solution by Permit.io that solves the problem with a simple policy configuration and enforcement code
 
 Each test is starting by cleaning the data and some policy from the Permit.io environment, then it applies the relevant policy data and runs the test.
 
