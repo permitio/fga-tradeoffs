@@ -130,6 +130,35 @@ resource "permitio_resource_set" "advertised_practitioner" {
   depends_on = [permitio_resource.practitioner]
 }
 
+resource "permitio_resource_set" "allowed_visit" {
+  name     = "Allowed Visit"
+  key      = "allowed_visit"
+  resource = permitio_resource.visit.key
+  conditions = jsonencode({
+    "allOf" : [
+      { "resource.concealed" : { "equals" : false } },
+      { "resource.practitioner_id" : {
+        "object_match" : {
+          "match" : {
+            "is_advertised" : { "equals" : true }
+          },
+          "fk_resource_type" : permitio_resource.practitioner.key,
+        }
+      } },
+      {
+        "resource.diagnosis" : {
+          "all_match" : {
+            "match" : {
+              "concealment" : { "equals" : false }
+            },
+            "fk_resource_type" : permitio_resource.diagnosis.key,
+          }
+        }
+      },
+    ],
+  })
+}
+
 resource "permitio_role" "user" {
   key         = "user"
   name        = "User"
