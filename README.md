@@ -8,12 +8,12 @@ The three possible trade-offs that are demonstrated are:
 - Complex Access Control Rules
 - Data manipulation
 
-For more information on each and read more, refer to the following blog post: TBD
+For more information on each and learn more, refer to the following blog post: TBD
 
 ## Project Structure
 
 #### Data
-The data that we are using to demonstrate the trade-offs, are set of visits that has relationships with diagnoses and practitioners.
+The data that we are using to demonstrate the trade-offs are a set of visits with relationships with diagnoses and practitioners.
 An allowed visit is a visit that is not concealed, its related diagnoses are not concealed, and its practitioner is advertised.
 
 All the mock data is stored in the `data/data.json` file.
@@ -40,9 +40,9 @@ All the mock data is stored in the `data/data.json` file.
 ```
 
 #### Tests
-The main test file for the project, is the `index.js` file that contains 4 types of policy check that requires both conditions and relationships to be checked.
+The project's main test file is the `index.js` file, which contains four types of policy checks that require both conditions and relationships to be checked.
 
-All the tests are filtering the visits array and should return the following result.
+All the tests filter the visits array and should return the following result:
 ```javascript
 [true, false, false, false, true, true]
 ```
@@ -55,20 +55,20 @@ The tests are:
 ##### Bonus:
 > Demonstration of a simple solution by Permit.io that solves the problem with a simple policy configuration and enforcement code
 
-Each test is starting by cleaning the data and some policy from the Permit.io environment, then it applies the relevant policy data and runs the test.
+Each test starts by cleaning the data and some policies from the Permit.io environment. Then, it applies the relevant policy data and runs the test.
 
 #### Policy Configuration
-Besides of the tests and the data, the project contains a `main.tf` file that apply the policy configuration to the Permit.io environment.
+Besides the tests and the data, the project contains a `main.tf` file that applies the policy configuration to the Permit.io environment.
 
 #### Policies
-The `policy` folder contains policy configuration in the Rego language that is used in the third test.
+The `policy` folder contains policy configuration in the Rego language used in the third test.
 
 ### `lib` folder
-All the code that is used to sync data to Permit.io and perform the policy checks are stored in the `lib` folder.
+The `lib` folder contains all the code used to sync data to Permit.io and perform the policy checks.
 
 ## Running the code
 
-The code is written in JavaScript and use Permit.io to base the authorization service. Running the project requires you to follow the following steps:
+The code is written in JavaScript and uses Permit.io to base the authorization service. Running the project requires you to follow the following steps:
 
 > Preqrequisites: Node.js, npm, terraform, and docker installed
 
@@ -83,7 +83,8 @@ The code is written in JavaScript and use Permit.io to base the authorization se
    terraform apply
    ```
    After this step, your Permit policy editor should look like the following:
-   TBD on GH
+   ![image](https://github.com/user-attachments/assets/b9387368-0fb1-4ffa-9722-2b947ea5c1b8)
+
 6. Run the Permit.io PDP docker container by running (ensure that you load the Permit.io API key in the environment):
    ```bash
    docker run -p 7766:7000 -p 8181:8181 --rm --env PDP_API_KEY=$PERMIT_API_KEY --env PDP_DEBUG=true permitio/pdp-v2:latest
