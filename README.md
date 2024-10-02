@@ -8,7 +8,7 @@ The three possible trade-offs that are demonstrated are:
 - Complex Access Control Rules
 - Data manipulation
 
-For more information on each and learn more, refer to the following blog post: TBD
+For more information on each and to learn more, refer to the following [blog post](https://www.permit.io/blog/possible-tradoffs-of-fine-grained-authorization)
 
 ## Project Structure
 
